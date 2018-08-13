@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Ticket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+
+	<!--Import Google Icon Font-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"  media="screen,projection"/>
+    <style>
+        
+        img.profile {
+			width: 40px;
+			height: 40px;
+			vertical-align: middle;
+		}
+		.nav-main--profile {
+			padding-left: 0.75rem;
+			padding-right: 0.75rem;
+		}
+		.session-container {
+			border: 1px solid #e2e2e2;
+			border-radius: 5px;
+		}
+        
+        .card-panel {
+            padding: 20px;
+            margin: 0.5rem 0 1rem 0;
+            border-radius: 2px;
+            background-color: #fff;
+        }
+
+		#preloader {
+			margin: 20px;
+			text-align: center;
+		}
+		#preloader .preloader-wrapper {
+			margin: 0 auto;
+		}
+        /* @media only screen and (min-width: 651px) {
+            .container {
+                width: 98%;
+            }
+        } */
+            
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+	<nav>
+		<div class="nav-wrapper cyan">
+		<a href="#" class="brand-logo">Tech Invasion</a>
+		<a href="#" data-target="nav-side" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+		<ul id="nav-main" class="mainnav right hide-on-med-and-down">
+			<li><a href="/">Home</a></li>
+			<li><a href="/map">Map</a></li>
+			<li class="active"><a href="/session">Session</a></li>
+			<li class="nav--ticket"></li>
+			<li class="nav--my-session"></li>
+			<li><a class="nav-main--profile dropdown-trigger" href="#!" data-target="dropdown1"></a></li>
+			<ul id="dropdown1" class="dropdown-content">
+				<li><a onClick="signOut()" href="#">Logout</a></li>
+			</ul>
+		</ul>
+		</div>
+	</nav> 
+	<ul class="sidenav" id="nav-side">
+		<li><a href="/">Home</a></li>
+		<li><a href="/map">Map</a></li>
+		<li class="active"><a href="/session">Session</a></li>
+		<li class="nav--ticket"></li>
+		<li class="nav--my-session"></li>
+		
+		<div class="row nav-side--profile dropdown-btn" >
+			<div class="nav-side--profile_img col s3"></div>
+			<div class="nav-side--profile_name col s9"></div>
+		</div>
+		
+		<ul class="dropdown-container nav-side">
+			<li><a onClick="signOut()" href="#">Logout</a></li>
+		</ul>
+	</ul>  
+    <div class="container">
+		<div id="preloader">
+				<div class="preloader-wrapper big active">
+					<div class="spinner-layer spinner-blue">
+						<div class="circle-clipper left">
+						<div class="circle"></div>
+						</div><div class="gap-patch">
+						<div class="circle"></div>
+						</div><div class="circle-clipper right">
+						<div class="circle"></div>
+						</div>
+					</div>
+				
+					<div class="spinner-layer spinner-red">
+						<div class="circle-clipper left">
+						<div class="circle"></div>
+						</div><div class="gap-patch">
+						<div class="circle"></div>
+						</div><div class="circle-clipper right">
+						<div class="circle"></div>
+						</div>
+					</div>
+				
+					<div class="spinner-layer spinner-yellow">
+						<div class="circle-clipper left">
+						<div class="circle"></div>
+						</div><div class="gap-patch">
+						<div class="circle"></div>
+						</div><div class="circle-clipper right">
+						<div class="circle"></div>
+						</div>
+					</div>
+				
+					<div class="spinner-layer spinner-green">
+						<div class="circle-clipper left">
+						<div class="circle"></div>
+						</div><div class="gap-patch">
+						<div class="circle"></div>
+						</div><div class="circle-clipper right">
+						<div class="circle"></div>
+						</div>
+					</div>
+				</div>
+		</div>
+        <div class="row session-list"></div>
+		
+        
+        
+    </div>
+    <!-- Firebase App is always required and must be first -->
+	<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+
+	<!-- Add additional services that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+
+    <!-- Materialize CSS -->	    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    
+    <script src="/js/main.js"></script>
+    <script src="/js/session.js"></script>
+    
+</body>
+</html>

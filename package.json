@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "firebase": "^5.3.1",
+    "firebase-admin": "^5.13.1",
+    "firebaseui": "^3.2.0",
+    "jade": "^1.11.0",
+    "qrcode": "^1.2.2",
+    "serve-favicon": "^2.5.0"
+  },
+  "name": "tech-invasion-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
